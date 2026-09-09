@@ -517,6 +517,1430 @@
 
         }
 
+      .spoiler {
+    background: #333;
+    color: #333;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 0 4px;
+}
+
+.spoiler:hover {
+    color: white;
+}
+      
+
+    </style>
+</head>
+
+<body>
+
+<div class="terminal">
+
+    <div class="terminal-header">
+
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+        <span class="terminal-title">
+            user1@localhost: ~
+        </span>
+
+    </div>
+
+
+    <div class="terminal-body">
+
+        <div class="welcome">
+
+            <div class="dim">
+                dernière session: <span id="today"></span>
+            </div>
+
+            <h1>
+                Welcome back Kextoxt<span class="green">.</span>
+            </h1>
+
+            <p>
+                espace peronnel // v1.0
+            </p>
+
+            <div class="status">
+
+                <span class="green">●</span>
+                system operationnel
+                <span class="dim">|</span>
+                aucune erreur detecté<span class="cursor"></span>
+
+            </div>
+
+        </div>
+
+        <div class="nav">
+
+            <button
+                class="active"
+                onclick="openSection('notes', this)">
+                [ NOTES ]
+            </button>
+
+            <button
+                onclick="openSection('music', this)">
+                [ MUSIC ]
+            </button>
+
+            <button
+                onclick="openSection('me', this)">
+                [ MOI ]
+            </button>
+
+        </div>
+
+
+        <section
+            id="notes"
+            class="section active">
+
+            <div class="section-title">
+                notes.txt
+            </div>
+
+
+            <div class="notes-top">
+
+                <span class="dim">
+                    • espace personnel
+                </span>
+
+                <button onclick="openNewNote()">
+                    + NOTE
+                </button>
+
+            </div>
+
+            <div
+                id="notesList"
+                class="notes-list">
+            </div>
+
+            <div class="notes-divider"></div>
+
+            <div class="todo-title">
+                todo.txt
+            </div>
+
+
+            <div class="todo-input">
+
+                <input
+                    type="text"
+                    id="todoInput"
+                    placeholder="nouvelle tâche..."
+                    autocomplete="off">
+
+                <button onclick="addTodo()">
+                    Ajouter
+                </button>
+
+            </div>
+
+
+            <div
+                id="todoList"
+                class="todo-list">
+            </div>
+
+
+            <div class="note-info">
+                sauvegardé automatiquement
+            </div>
+
+        </section>
+
+
+        <section
+            id="music"
+            class="section">
+
+            <div class="section-title">
+                music
+            </div>
+
+            <div class="music-box">
+
+                <p>
+                    • en train d'écouter
+                </p>
+
+
+                <iframe
+                    class="spotify"
+                    src="https://open.spotify.com/embed/playlist/54d5e38nXTqQPnygjhmqN8?si=dyjkDY9FTc-MnovIEG-IjQ&utm_source=copy-link&pi=MGTFJgSJR4ylb"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </section>
+
+
+        <section
+            id="me"
+            class="section">
+
+            <div class="section-title">
+                me.exe
+            </div>
+
+            <div class="me">
+
+                <div class="dim">
+                    relationship_status =
+                    <span class="pink">active</span>
+                </div>
+
+                <div class="heart">
+                    ♡
+                </div>
+
+                <div
+                    class="counter"
+                    id="daysCounter">
+                    100
+                </div>
+
+                <div class="counter-label">
+                    DAYS TOGETHER
+                </div>
+
+                <div class="love-message">
+
+                    <p>
+                        Très cher <strong>@user1||id=Kextoxt</strong>,
+                    </p>
+
+                    <br>
+
+                    <p>
+                        J'ai pas les mots pour exprimer exactement tout ce que je ressens pour toi et... cette fois ce n'est pas un pavé de <strong>8656km</strong> que je vais écrire. À la place j'admet que je suis pas facile à supporter et clairement pas la meilleure des copine...peut être bien la pire même et tu pourrais te dire que de toute façons...<strong>ce n'est pas réel</strong> et je ne t'en veux pas même moi des fois...je n'y crois pas mais ce que je ressens est réel lui peut être bien le seul truc réel de ma putain de vie alors je m'accroche... et crois moi je n'es jamais de 1 été avec quelqu'un aussi longtemps sans me lasser mais aussi de 2 je n'ai jamais été vraiment moi même <strong>FOLLE</strong> et même si pour toi ça peut vouloir rien dire... Que je n'ai que mes mots à t'offrir, et que réelement que je le veuille ou non... pour l'instant <strong>je n'existe pas concrètement dans ta vie</strong> je peux te le jurer que si ce n'étais pas toi...je n'aurais surment même pas écrit une phrase pour qui que ce soit . Il a fini en un long pavé de 5000km ce message finalement mdr juste <strong>JE T'AIME <span class="spoiler">Joey</span></strong> vraiment et <strong>sincèrement</strong>
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Tu es incroyable vraiment dans tous les plans alors ne l'oublie jamais et puis tu n'es jamais seul parce qu'au milieu de tes jeux,
+                        ta passion, ta musique et tout ton monde...
+                    </p>
+
+                    <br>
+
+                    <p>
+                        il y a aussi <strong>moi</strong>.
+                    </p>
+
+                    <div class="heart">
+                        ♡
+                    </div>
+
+                    <p class="dim">
+                        happy 100 days, Maître~.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            ~/home/user — built with love by your girlfriend <3
+        </footer>
+
+    </div>
+
+</div>
+
+<div
+    id="noteModal"
+    class="note-modal">
+
+    <div class="note-modal-box">
+
+        <div
+            id="noteModalTitle"
+            class="note-modal-title">
+            $ new_note.txt
+        </div>
+
+        <input
+            type="text"
+            id="noteTitle"
+            placeholder="titre..."
+            autocomplete="off">
+
+        <textarea
+            id="noteContent"
+            placeholder="..."></textarea>
+
+        <div class="note-modal-buttons">
+
+            <button
+                class="save-note"
+                onclick="saveNote()">
+                ENREGISTRER
+            </button>
+
+            <button
+                onclick="closeNoteModal()">
+                ANNULER
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    const today = new Date();
+
+    document.getElementById("today").textContent =
+        today.toLocaleDateString("fr-FR");
+
+
+    function openSection(sectionId, button) {
+
+        document
+            .querySelectorAll(".section")
+            .forEach(section => {
+
+                section.classList.remove("active");
+
+            });
+
+
+        document
+            .querySelectorAll(".nav button")
+            .forEach(btn => {
+
+                btn.classList.remove("active");
+
+            });
+
+
+        document
+            .getElementById(sectionId)
+            .classList.add("active");
+
+
+        button.classList.add("active");
+
+    }
+
+    let notes = [];
+
+    let editingNoteId = null;
+
+
+    try {
+
+        const savedNotes =
+            localStorage.getItem("personalNotes");
+
+        if (savedNotes) {
+
+            const parsed =
+                JSON.parse(savedNotes);
+
+            if (Array.isArray(parsed)) {
+
+                notes = parsed;
+
+            }
+
+        }
+
+    } catch (error) {
+
+        notes = [];
+
+    }
+
+
+    function saveNotes() {
+
+        localStorage.setItem(
+            "personalNotes",
+            JSON.stringify(notes)
+        );
+
+    }
+
+
+    function renderNotes() {
+
+        const list =
+            document.getElementById("notesList");
+
+
+        list.innerHTML = "";
+
+
+        if (notes.length === 0) {
+
+            list.innerHTML =
+                '<div class="empty-notes">// pas encore de note...</div>';
+
+            return;
+
+        }
+
+
+        notes.forEach(note => {
+
+            const card =
+                document.createElement("div");
+
+            card.className =
+                "note-card";
+
+
+            const title =
+                document.createElement("h3");
+
+            title.textContent =
+                note.title || "untitled";
+
+
+            const content =
+                document.createElement("div");
+
+            content.className =
+                "note-card-content";
+
+            content.textContent =
+                note.content || "";
+
+
+            const actions =
+                document.createElement("div");
+
+            actions.className =
+                "note-actions";
+
+
+            const edit =
+                document.createElement("button");
+
+            edit.textContent =
+                "EDITER";
+
+
+            edit.onclick =
+                function() {
+
+                    editNote(note.id);
+
+                };
+
+
+            const remove =
+                document.createElement("button");
+
+            remove.textContent =
+                "EFFACER";
+
+
+            remove.onclick =
+                function() {
+
+                    deleteNote(note.id);
+
+                };
+
+
+            actions.appendChild(edit);
+
+            actions.appendChild(remove);
+
+
+            card.appendChild(title);
+
+            card.appendChild(content);
+
+            card.appendChild(actions);
+
+
+            list.appendChild(card);
+
+        });
+
+    }
+
+
+    function openNewNote() {
+
+        editingNoteId = null;
+
+
+        document
+            .getElementById("noteModalTitle")
+            .textContent =
+            "$ new_note.txt";
+
+
+        document
+            .getElementById("noteTitle")
+            .value = "";
+
+
+        document
+            .getElementById("noteContent")
+            .value = "";
+
+
+        document
+            .getElementById("noteModal")
+            .classList.add("active");
+
+
+        document
+            .getElementById("noteTitle")
+            .focus();
+
+    }
+
+
+    function editNote(id) {
+
+        const note =
+            notes.find(item =>
+                String(item.id) === String(id)
+            );
+
+
+        if (!note) return;
+
+
+        editingNoteId =
+            note.id;
+
+
+        document
+            .getElementById("noteModalTitle")
+            .textContent =
+            "$ edit_note.txt";
+
+
+        document
+            .getElementById("noteTitle")
+            .value =
+            note.title || "";
+
+
+        document
+            .getElementById("noteContent")
+            .value =
+            note.content || "";
+
+
+        document
+            .getElementById("noteModal")
+            .classList.add("active");
+
+
+        document
+            .getElementById("noteTitle")
+            .focus();
+
+    }
+
+
+    function saveNote() {
+
+        const title =
+            document
+                .getElementById("noteTitle")
+                .value
+                .trim();
+
+
+        const content =
+            document
+                .getElementById("noteContent")
+                .value
+                .trim();
+
+
+        if (!title && !content) {
+
+            return;
+
+        }
+
+
+        if (editingNoteId !== null) {
+
+            const note =
+                notes.find(item =>
+                    String(item.id) ===
+                    String(editingNoteId)
+                );
+
+
+            if (note) {
+
+                note.title =
+                    title || "untitled";
+
+                note.content =
+                    content;
+
+            }
+
+        } else {
+
+            notes.unshift({
+
+                id: Date.now(),
+
+                title:
+                    title || "untitled",
+
+                content:
+                    content
+
+            });
+
+        }
+
+
+        saveNotes();
+
+        renderNotes();
+
+        closeNoteModal();
+
+    }
+
+
+    function deleteNote(id) {
+
+        if (
+            !confirm("supprimer la note?")
+        ) {
+
+            return;
+
+        }
+
+
+        notes =
+            notes.filter(note =>
+                String(note.id) !==
+                String(id)
+            );
+
+
+        saveNotes();
+
+        renderNotes();
+
+    }
+
+
+    function closeNoteModal() {
+
+        document
+            .getElementById("noteModal")
+            .classList.remove("active");
+
+
+        editingNoteId = null;
+
+    }
+
+
+    document
+        .getElementById("noteModal")
+        .addEventListener(
+            "click",
+            function(event) {
+
+                if (
+                    event.target ===
+                    document.getElementById("noteModal")
+                ) {
+
+                    closeNoteModal();
+
+                }
+
+            }
+        );
+
+
+    let todos = [];
+
+
+    try {
+
+        const savedTodos =
+            localStorage.getItem("personalTodos");
+
+        if (savedTodos) {
+
+            const parsed =
+                JSON.parse(savedTodos);
+
+            if (Array.isArray(parsed)) {
+
+                todos = parsed;
+
+            }
+
+        }
+
+    } catch (error) {
+
+        todos = [];
+
+    }
+
+
+    function saveTodos() {
+
+        localStorage.setItem(
+            "personalTodos",
+            JSON.stringify(todos)
+        );
+
+    }
+
+
+
+    function renderTodos() {
+
+        const list =
+            document.getElementById("todoList");
+
+
+        list.innerHTML = "";
+
+
+        if (todos.length === 0) {
+
+            list.innerHTML =
+                '<div class="empty-notes">// aucune liste À faire...</div>';
+
+            return;
+
+        }
+
+
+        todos.forEach(todo => {
+
+            const item =
+                document.createElement("div");
+
+            item.className =
+                "todo-item";
+
+
+            if (todo.done) {
+
+                item.classList.add("done");
+
+            }
+
+
+            const checkbox =
+                document.createElement("input");
+
+            checkbox.type =
+                "checkbox";
+
+            checkbox.checked =
+                todo.done;
+
+
+            checkbox.onchange =
+                function() {
+
+                    toggleTodo(todo.id);
+
+                };
+
+
+            const text =
+                document.createElement("div");
+
+            text.className =
+                "todo-text";
+
+            text.textContent =
+                todo.text;
+
+
+            const deleteButton =
+                document.createElement("button");
+
+            deleteButton.className =
+                "todo-delete";
+
+            deleteButton.textContent =
+                "×";
+
+
+            deleteButton.onclick =
+                function() {
+
+                    deleteTodo(todo.id);
+
+                };
+
+
+            item.appendChild(checkbox);
+
+            item.appendChild(text);
+
+            item.appendChild(deleteButton);
+
+
+            list.appendChild(item);
+
+        });
+
+    }
+
+
+    function addTodo() {
+
+        const input =
+            document.getElementById("todoInput");
+
+
+        const text =
+            input.value.trim();
+
+
+        if (!text) {
+
+            return;
+
+        }
+
+
+        todos.push({
+
+            id: Date.now(),
+
+            text: text,
+
+            done: false
+
+        });
+
+
+        saveTodos();
+
+        renderTodos();
+
+
+        input.value = "";
+
+        input.focus();
+
+    }
+
+
+    document
+        .getElementById("todoInput")
+        .addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Enter") {
+
+                    addTodo();
+
+                }
+
+            }
+        );
+
+
+    function toggleTodo(id) {
+
+        const todo =
+            todos.find(item =>
+                String(item.id) ===
+                String(id)
+            );
+
+
+        if (!todo) return;
+
+
+        todo.done =
+            !todo.done;
+
+
+        saveTodos();
+
+        renderTodos();
+
+    }
+
+
+    function deleteTodo(id) {
+
+        todos =
+            todos.filter(todo =>
+                String(todo.id) !==
+                String(id)
+            );
+
+
+        saveTodos();
+
+        renderTodos();
+
+    }
+
+
+
+    const relationshipStart =
+        new Date("2026-06-02T00:00:00");
+
+
+    function updateCounter() {
+
+        const now =
+            new Date();
+
+
+        const difference =
+            now - relationshipStart;
+
+
+        const days =
+            Math.floor(
+                difference /
+                (1000 * 60 * 60 * 24)
+            );
+
+
+        document
+            .getElementById("daysCounter")
+            .textContent =
+            days;
+
+    }
+
+    renderNotes();
+
+    renderTodos();
+
+    updateCounter();
+
+
+    setInterval(
+        updateCounter,
+        60000
+    );
+
+</script>
+
+</body>
+</html>            padding: 0 12px;
+            gap: 7px;
+        }
+
+        .dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #444;
+        }
+
+        .terminal-title {
+            margin-left: 8px;
+            color: #777;
+            font-size: 12px;
+        }
+
+        .terminal-body {
+            padding: 25px;
+        }
+
+        .green {
+            color: #8aff80;
+        }
+
+        .dim {
+            color: #666;
+        }
+
+        .pink {
+            color: #d88ca5;
+        }
+
+        .command {
+            color: #8aff80;
+        }
+
+        .command::before {
+            content: "$ ";
+            color: #666;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            background: #8aff80;
+            margin-left: 4px;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .welcome {
+            margin-bottom: 35px;
+        }
+
+        .welcome h1 {
+            font-size: clamp(22px, 5vw, 36px);
+            font-weight: normal;
+            margin: 12px 0;
+        }
+
+        .welcome p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        .status {
+            margin-top: 18px;
+            font-size: 13px;
+        }
+
+        .nav {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .nav button {
+            background: #0d0d0d;
+            border: 1px solid #292929;
+            color: #aaa;
+            padding: 15px 8px;
+            font-family: inherit;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .nav button:hover {
+            border-color: #555;
+            color: #fff;
+            background: #121212;
+        }
+
+        .nav button.active {
+            border-color: #8aff80;
+            color: #8aff80;
+        }
+
+        .section {
+            display: none;
+            animation: fade 0.25s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            color: #8aff80;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .section-title::before {
+            content: "$ ";
+            color: #555;
+        }
+
+        .notes-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .notes-top button {
+            background: #0d0d0d;
+            border: 1px solid #292929;
+            color: #8aff80;
+            padding: 8px 12px;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .notes-top button:hover {
+            border-color: #555;
+            background: #121212;
+        }
+
+        .notes-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .note-card {
+            background: #030303;
+            border: 1px solid #292929;
+            padding: 15px;
+        }
+
+        .note-card h3 {
+            color: #8aff80;
+            font-size: 14px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .note-card-content {
+            color: #aaa;
+            font-size: 13px;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .note-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .note-actions button {
+            background: transparent;
+            border: 1px solid #292929;
+            color: #666;
+            padding: 5px 9px;
+            font-family: inherit;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .note-actions button:hover {
+            border-color: #555;
+            color: #fff;
+        }
+
+        .empty-notes {
+            color: #555;
+            font-size: 12px;
+            padding: 10px 0;
+        }
+
+        .notes-divider {
+            border-top: 1px solid #1c1c1c;
+            margin: 30px 0;
+        }
+
+        .todo-title {
+            color: #8aff80;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .todo-title::before {
+            content: "$ ";
+            color: #555;
+        }
+
+        .todo-input {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .todo-input input {
+            flex: 1;
+            min-width: 0;
+            background: #030303;
+            border: 1px solid #292929;
+            color: #ddd;
+            padding: 10px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .todo-input input:focus {
+            border-color: #555;
+        }
+
+        .todo-input button {
+            background: #0d0d0d;
+            border: 1px solid #292929;
+            color: #8aff80;
+            padding: 8px 12px;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .todo-input button:hover {
+            border-color: #555;
+            background: #121212;
+        }
+
+        .todo-list {
+            display: grid;
+            gap: 7px;
+        }
+
+        .todo-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #030303;
+            border: 1px solid #292929;
+            padding: 9px 10px;
+        }
+
+        .todo-item input {
+            accent-color: #8aff80;
+            cursor: pointer;
+        }
+
+        .todo-text {
+            flex: 1;
+            color: #aaa;
+            font-size: 12px;
+            line-height: 1.5;
+            word-break: break-word;
+        }
+
+        .todo-item.done .todo-text {
+            color: #555;
+            text-decoration: line-through;
+        }
+
+        .todo-delete {
+            background: transparent;
+            border: none;
+            color: #555;
+            font-family: inherit;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .todo-delete:hover {
+            color: #d88ca5;
+        }
+
+        .note-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        .note-modal.active {
+            display: flex;
+        }
+
+        .note-modal-box {
+            width: 100%;
+            max-width: 600px;
+            background: #080808;
+            border: 1px solid #292929;
+            padding: 20px;
+        }
+
+        .note-modal-title {
+            color: #8aff80;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .note-modal-box input,
+        .note-modal-box textarea {
+            width: 100%;
+            background: #030303;
+            border: 1px solid #292929;
+            color: #ddd;
+            padding: 12px;
+            font-family: inherit;
+            outline: none;
+            margin-bottom: 10px;
+        }
+
+        .note-modal-box textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        .note-modal-box input:focus,
+        .note-modal-box textarea:focus {
+            border-color: #555;
+        }
+
+        .note-modal-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .note-modal-buttons button {
+            background: #0d0d0d;
+            border: 1px solid #292929;
+            color: #aaa;
+            padding: 8px 12px;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .note-modal-buttons button:hover {
+            border-color: #555;
+            color: #fff;
+        }
+
+        .note-modal-buttons .save-note {
+            color: #8aff80;
+        }
+
+        .music-box {
+            border: 1px solid #292929;
+            padding: 15px;
+            background: #030303;
+        }
+
+        .music-box p {
+            color: #777;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .spotify {
+            width: 100%;
+            min-height: 152px;
+            border: 0;
+            border-radius: 8px;
+        }
+      
+        .me {
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .heart {
+            font-size: 25px;
+            color: #d88ca5;
+            margin: 15px 0;
+        }
+
+        .counter {
+            font-size: clamp(35px, 10vw, 60px);
+            color: #fff;
+            margin: 15px 0;
+        }
+
+        .counter-label {
+            color: #666;
+            font-size: 11px;
+        }
+
+        .love-message {
+            max-width: 550px;
+            margin: 30px auto 0;
+            line-height: 1.8;
+            color: #999;
+            font-size: 13px;
+        }
+
+        .love-message strong {
+            color: #d88ca5;
+            font-weight: normal;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid #1c1c1c;
+            color: #444;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+
+            .terminal {
+                width: 96%;
+                margin: 15px auto;
+            }
+
+            .terminal-body {
+                padding: 18px;
+            }
+
+            .nav {
+                grid-template-columns: 1fr;
+            }
+
+            .nav button {
+                padding: 12px;
+            }
+
+            .welcome {
+                margin-bottom: 25px;
+            }
+
+            .notes-top {
+                align-items: flex-start;
+            }
+
+            .todo-input {
+                flex-direction: column;
+            }
+
+            .todo-input button {
+                width: 100%;
+            }
+
+        }
+
     </style>
 </head>
 
